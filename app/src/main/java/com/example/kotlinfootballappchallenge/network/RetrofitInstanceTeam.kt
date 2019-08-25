@@ -1,4 +1,4 @@
-package com.example.kotlinfootballappchallenge.network.footballTeam
+package com.example.kotlinfootballappchallenge.network
 
 import com.example.kotlinfootballappchallenge.common.Constants
 import okhttp3.OkHttpClient

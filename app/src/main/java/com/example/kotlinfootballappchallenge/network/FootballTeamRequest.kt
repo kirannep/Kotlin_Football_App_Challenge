@@ -1,4 +1,4 @@
-package com.example.kotlinfootballappchallenge.network.footballTeam
+package com.example.kotlinfootballappchallenge.network
 
 import com.example.kotlinfootballappchallenge.model.FootballTeam
 import retrofit2.Call
@@ -10,5 +10,7 @@ interface FootballTeamRequest {
     @GET("search_all_teams.php")
    fun getTeam(@Query("l") footballTeam:String): Call<FootballTeam>
 
+    @GET("lookupteam.php")
+    fun getTeamInfo(@Query("id") teamId:Int): Call<FootballTeam>
 
 }
