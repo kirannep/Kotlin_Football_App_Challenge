@@ -1,10 +1,10 @@
 package com.example.kotlinfootballappchallenge.network
 
-import com.example.kotlinfootballappchallenge.model.FootballTeam
-import com.example.kotlinfootballappchallenge.model.Teams
+import com.example.kotlinfootballappchallenge.model.footballTeam.FootballTeam
+import com.example.kotlinfootballappchallenge.model.footballTeam.Teams
+import com.example.kotlinfootballappchallenge.model.teamDetails.TeamDetails
 import retrofit2.Call
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface FootballTeamRequest {
@@ -12,7 +12,7 @@ interface FootballTeamRequest {
    fun getTeam(@Query("l") footballTeam:String): Call<FootballTeam>
 
     @GET("lookupteam.php")
-    fun getTeamInfo(@Query("id") teamId:Int): Call<Teams>
+    fun getTeamInfo(@Query("id") teamId:Int): Call<TeamDetails>
 
 //    @GET("lookupteam.php/{id}")
 //    fun getTeamInfo(@Path("id") id:Int) :Call<Teams>

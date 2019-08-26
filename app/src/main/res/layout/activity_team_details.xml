@@ -8,7 +8,7 @@
         tools:context=".view.teamDetails.TeamDetailsActivity">
 
     <TextView
-            android:text="TEAM NAME"
+            tools:text="TEAM NAME"
             android:layout_width="167dp"
             android:layout_height="69dp"
             android:id="@+id/tv_teamName" app:layout_constraintTop_toTopOf="parent"

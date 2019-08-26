@@ -5,9 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.kotlinfootballappchallenge.R
-import com.example.kotlinfootballappchallenge.model.FootballTeam
-import com.example.kotlinfootballappchallenge.presenter.footballTeam.FootballTeamPresenter
-import com.example.kotlinfootballappchallenge.presenter.footballTeam.FootballTeamView
 import com.example.kotlinfootballappchallenge.view.footballTeam.FootballTeamActivity
 import com.example.kotlinfootballappchallenge.view.teamDetails.TeamDetailsActivity
 import kotlinx.android.synthetic.main.activity_main.*

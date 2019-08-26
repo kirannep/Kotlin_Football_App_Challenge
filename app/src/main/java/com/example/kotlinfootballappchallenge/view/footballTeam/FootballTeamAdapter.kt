@@ -5,11 +5,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kotlinfootballappchallenge.R
-import com.example.kotlinfootballappchallenge.model.FootballTeam
-import com.example.kotlinfootballappchallenge.model.Teams
+import com.example.kotlinfootballappchallenge.model.footballTeam.FootballTeam
+import com.example.kotlinfootballappchallenge.model.footballTeam.Teams
 import kotlinx.android.synthetic.main.activity_football_team.view.*
 
-class FootballTeamAdapter(private val footballTeam:FootballTeam,private val listener: onTeamClickedListener):RecyclerView.Adapter<TeamViewHolder>() {
+class FootballTeamAdapter(private val footballTeam: FootballTeam, private val listener: onTeamClickedListener):RecyclerView.Adapter<TeamViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TeamViewHolder {
         return TeamViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.activity_football_team,parent,false))
     }
@@ -27,7 +27,7 @@ class FootballTeamAdapter(private val footballTeam:FootballTeam,private val list
 }
 
 class TeamViewHolder(view: View):RecyclerView.ViewHolder(view){
-    fun bind(teams: Teams,listener: onTeamClickedListener){
+    fun bind(teams: Teams, listener: onTeamClickedListener){
         itemView.setOnClickListener{
             listener.onTeamClicked(teams)
         }

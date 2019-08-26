@@ -6,12 +6,11 @@ import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlinfootballappchallenge.R
-import com.example.kotlinfootballappchallenge.model.FootballTeam
-import com.example.kotlinfootballappchallenge.model.Teams
+import com.example.kotlinfootballappchallenge.model.footballTeam.FootballTeam
+import com.example.kotlinfootballappchallenge.model.footballTeam.Teams
 import com.example.kotlinfootballappchallenge.presenter.footballTeam.FootballTeamPresenter
 import com.example.kotlinfootballappchallenge.presenter.footballTeam.FootballTeamView
 import com.example.kotlinfootballappchallenge.view.teamDetails.TeamDetailsActivity
-import kotlinx.android.synthetic.main.activity_football_team.*
 import kotlinx.android.synthetic.main.recyclerview.*
 
 class FootballTeamActivity : AppCompatActivity(),FootballTeamView {
