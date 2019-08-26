@@ -1,6 +1,7 @@
 package com.example.kotlinfootballappchallenge.presenter.footballTeam
 
 import android.util.Log
+import android.widget.ProgressBar
 import com.example.kotlinfootballappchallenge.model.footballTeam.FootballTeam
 import com.example.kotlinfootballappchallenge.network.FootballTeamRequest
 import com.example.kotlinfootballappchallenge.network.RetrofitInstanceTeam
@@ -32,5 +33,6 @@ class FootballTeamPresenter: BasePresenter<FootballTeamView>() {
 
 interface FootballTeamView:BasePresenter.View{
     fun showLoading()
+
     fun showFootballTeamInfo(footballTeam: FootballTeam)
 }

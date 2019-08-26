@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.ProgressBar
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlinfootballappchallenge.R
 import com.example.kotlinfootballappchallenge.model.footballTeam.FootballTeam
@@ -11,13 +13,17 @@ import com.example.kotlinfootballappchallenge.model.footballTeam.Teams
 import com.example.kotlinfootballappchallenge.presenter.footballTeam.FootballTeamPresenter
 import com.example.kotlinfootballappchallenge.presenter.footballTeam.FootballTeamView
 import com.example.kotlinfootballappchallenge.view.teamDetails.TeamDetailsActivity
+import kotlinx.android.synthetic.main.activity_football_team.*
 import kotlinx.android.synthetic.main.recyclerview.*
 
 class FootballTeamActivity : AppCompatActivity(),FootballTeamView {
-    val presenter:FootballTeamPresenter = FootballTeamPresenter()
     override fun showLoading() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
+
+    val presenter:FootballTeamPresenter = FootballTeamPresenter()
+
+
 
     override fun showFootballTeamInfo(footballTeam: FootballTeam) {
         val adapter:FootballTeamAdapter = FootballTeamAdapter(footballTeam,object : onTeamClickedListener{

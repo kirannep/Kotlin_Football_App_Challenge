@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_team ->{
                 intent = Intent(this@MainActivity,FootballTeamActivity::class.java)
             }
-            R.id.btn_infoTeam ->{
+            R.id.btn_bubblesort ->{
                 intent = Intent(this@MainActivity,TeamDetailsActivity::class.java)
             }
         }
@@ -29,6 +29,6 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         btn_team.setOnClickListener(this)
-        btn_infoTeam.setOnClickListener(this)
+        btn_bubblesort.setOnClickListener(this)
     }
 }

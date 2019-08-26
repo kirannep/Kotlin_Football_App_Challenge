@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.kolinmoviegithubchallenge.common.loadUrl
 import com.example.kotlinfootballappchallenge.R
 import com.example.kotlinfootballappchallenge.model.footballTeam.FootballTeam
 import com.example.kotlinfootballappchallenge.model.footballTeam.Teams
@@ -20,9 +21,9 @@ class FootballTeamAdapter(private val footballTeam: FootballTeam, private val li
 
     override fun onBindViewHolder(holder: TeamViewHolder, position: Int) {
        holder.tvTitle.text = footballTeam.teams[position].strTeam
+       holder.ivBadge.loadUrl(footballTeam.teams[position].strTeamBadge)
        holder.bind(footballTeam.teams[position],listener)
     }
-
 
 }
 
@@ -33,6 +34,7 @@ class TeamViewHolder(view: View):RecyclerView.ViewHolder(view){
         }
     }
     val tvTitle = view.tv_team
+    val ivBadge = view.iv_teamBadge
 }
 
 interface onTeamClickedListener{
