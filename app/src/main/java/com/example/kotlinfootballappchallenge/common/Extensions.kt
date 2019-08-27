@@ -1,4 +1,4 @@
-package com.example.kolinmoviegithubchallenge.common
+package com.example.kotlinfootballappchallenge.common
 
 import android.view.LayoutInflater
 import android.view.View
@@ -17,6 +17,13 @@ fun ImageView.loadUrl(url:String){
         .into(this)
 }
 
+fun List<String>.toIntList():MutableList<Int>{
+    var list : MutableList<Int> = mutableListOf()
+    for(item in this){
+        list.add(item.toInt())
+    }
+    return list
+}
 
 //The below two works similarly, equal sign works as returning value
 //fun String.removeFirstLetter() : String{

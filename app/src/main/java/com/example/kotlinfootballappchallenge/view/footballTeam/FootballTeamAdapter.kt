@@ -1,10 +1,10 @@
 package com.example.kotlinfootballappchallenge.view.footballTeam
 
-import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.kolinmoviegithubchallenge.common.loadUrl
+import com.example.kotlinfootballappchallenge.common.inflate
+import com.example.kotlinfootballappchallenge.common.loadUrl
 import com.example.kotlinfootballappchallenge.R
 import com.example.kotlinfootballappchallenge.model.footballTeam.FootballTeam
 import com.example.kotlinfootballappchallenge.model.footballTeam.Teams
@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_football_team.view.*
 
 class FootballTeamAdapter(private val footballTeam: FootballTeam, private val listener: onTeamClickedListener):RecyclerView.Adapter<TeamViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TeamViewHolder {
-        return TeamViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.activity_football_team,parent,false))
+        return TeamViewHolder(parent.inflate(R.layout.activity_football_team))
     }
 
     override fun getItemCount(): Int {

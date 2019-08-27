@@ -5,13 +5,11 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.ProgressBar
-import com.example.kolinmoviegithubchallenge.common.loadUrl
+import com.example.kotlinfootballappchallenge.common.loadUrl
 import com.example.kotlinfootballappchallenge.R
-import com.example.kotlinfootballappchallenge.model.footballTeam.Teams
 import com.example.kotlinfootballappchallenge.model.teamDetails.TeamDetails
 import com.example.kotlinfootballappchallenge.presenter.teamDetails.TeamDetailsPresenter
 import com.example.kotlinfootballappchallenge.presenter.teamDetails.TeamView
-import kotlinx.android.synthetic.main.activity_football_team.*
 import kotlinx.android.synthetic.main.activity_team_details.*
 
 class TeamDetailsActivity : AppCompatActivity(),TeamView {

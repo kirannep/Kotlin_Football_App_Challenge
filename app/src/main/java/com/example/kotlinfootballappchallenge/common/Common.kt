@@ -1,4 +1,4 @@
-package com.example.kolinmoviegithubchallenge.common
+package com.example.kotlinfootballappchallenge.common
 
 import retrofit2.Call
 import retrofit2.Callback

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.kotlinfootballappchallenge.R
+import com.example.kotlinfootballappchallenge.view.bubblesort.BubbleSortActivity
 import com.example.kotlinfootballappchallenge.view.footballTeam.FootballTeamActivity
 import com.example.kotlinfootballappchallenge.view.teamDetails.TeamDetailsActivity
 import kotlinx.android.synthetic.main.activity_main.*
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 intent = Intent(this@MainActivity,FootballTeamActivity::class.java)
             }
             R.id.btn_bubblesort ->{
-                intent = Intent(this@MainActivity,TeamDetailsActivity::class.java)
+                intent = Intent(this@MainActivity,BubbleSortActivity::class.java)
             }
         }
         startActivity(intent)
