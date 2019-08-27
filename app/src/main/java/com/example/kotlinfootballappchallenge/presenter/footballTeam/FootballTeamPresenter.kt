@@ -2,6 +2,7 @@ package com.example.kotlinfootballappchallenge.presenter.footballTeam
 
 import android.util.Log
 import android.widget.ProgressBar
+import com.example.kotlinfootballappchallenge.common.Constants
 import com.example.kotlinfootballappchallenge.model.footballTeam.FootballTeam
 import com.example.kotlinfootballappchallenge.network.FootballTeamRequest
 import com.example.kotlinfootballappchallenge.network.RetrofitInstanceTeam
@@ -15,7 +16,7 @@ class FootballTeamPresenter: BasePresenter<FootballTeamView>() {
         super.onViewAttached(view)
         val teamRequest = RetrofitInstanceTeam().retrofitInstanceTeam.create(
             FootballTeamRequest::class.java)
-        val call: Call<FootballTeam> = teamRequest.getTeam("English Premier League")
+        val call: Call<FootballTeam> = teamRequest.getTeam(Constants.CLUB)
         call.enqueue(object: Callback<FootballTeam>{
             override fun onFailure(call: Call<FootballTeam>, t: Throwable) {
                 Log.d("errormsg: ",t.message)
